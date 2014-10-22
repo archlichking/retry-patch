@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+/**
+ * This tiny wrapper file checks for known node flags and appends them
+ * when found, before invoking the "real" _mocha(1) executable.
+ */
+
+var spawn = require('child_process').spawn
+  , args = [ __dirname + '/../index.js' ];
+
+process.argv.slice(2).forEach(function(arg){
+  args.push(arg);
+});
+
+var proc = spawn(process.argv[0], args, { customFds: [0,1,2] });
+proc.on('exit', function (code, signal) {
+  process.on('exit', function(){
+    if (signal) {
+      process.kill(process.pid, signal);
+    } else {
+      process.exit(code);
+    }
+  });
+});
+
+// console.log(process.argv)
