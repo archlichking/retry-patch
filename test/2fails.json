@@ -1,0 +1,60 @@
+{
+    "stats": {
+        "suites": 1,
+        "tests": 2,
+        "passes": 0,
+        "pending": 0,
+        "failures": 2,
+        "start": "2014-10-22T20:38:14.542Z",
+        "end": "2014-10-22T20:38:14.546Z",
+        "duration": 4
+    },
+    "tests": [{
+        "title": "no failed case",
+        "fullTitle": "retry patch no failed case",
+        "duration": 1,
+        "err": {
+            "message": "expected 1 to equal 2",
+            "showDiff": true,
+            "actual": 1,
+            "expected": 2,
+            "stack": "AssertionError: expected 1 to equal 2\n    at Context.<anonymous> (/Users/lzhu9/Develop/retry/retryTest.js:10:22)\n    at Test.Runnable.run (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runnable.js:217:15)\n    at Runner.runTest (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:373:10)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:451:12\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:298:14)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:308:7\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:246:23)\n    at Object._onImmediate (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:275:5)\n    at processImmediate [as _immediateCallback] (timers.js:330:15)"
+        }
+    }, {
+        "title": "xxxx [CS1412444]",
+        "fullTitle": "retry patch xxxx [CS1412444]",
+        "duration": 0,
+        "err": {
+            "message": "expected 2 to equal 1",
+            "showDiff": true,
+            "actual": 2,
+            "expected": 1,
+            "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (/Users/lzhu9/Develop/retry/retryTest.js:15:22)\n    at Test.Runnable.run (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runnable.js:217:15)\n    at Runner.runTest (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:373:10)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:451:12\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:298:14)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:308:7\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:246:23)\n    at Object._onImmediate (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:275:5)\n    at processImmediate [as _immediateCallback] (timers.js:330:15)"
+        }
+    }],
+    "pending": [],
+    "failures": [{
+        "title": "no failed case",
+        "fullTitle": "retry patch no failed case",
+        "duration": 1,
+        "err": {
+            "message": "expected 1 to equal 2",
+            "showDiff": true,
+            "actual": 1,
+            "expected": 2,
+            "stack": "AssertionError: expected 1 to equal 2\n    at Context.<anonymous> (/Users/lzhu9/Develop/retry/retryTest.js:10:22)\n    at Test.Runnable.run (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runnable.js:217:15)\n    at Runner.runTest (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:373:10)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:451:12\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:298:14)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:308:7\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:246:23)\n    at Object._onImmediate (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:275:5)\n    at processImmediate [as _immediateCallback] (timers.js:330:15)"
+        }
+    }, {
+        "title": "xxxx [CS1412444]",
+        "fullTitle": "retry patch xxxx [CS1412444]",
+        "duration": 0,
+        "err": {
+            "message": "expected 2 to equal 1",
+            "showDiff": true,
+            "actual": 2,
+            "expected": 1,
+            "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (/Users/lzhu9/Develop/retry/retryTest.js:15:22)\n    at Test.Runnable.run (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runnable.js:217:15)\n    at Runner.runTest (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:373:10)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:451:12\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:298:14)\n    at /Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:308:7\n    at next (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:246:23)\n    at Object._onImmediate (/Users/lzhu9/Develop/retry/node_modules/mocha/lib/runner.js:275:5)\n    at processImmediate [as _immediateCallback] (timers.js:330:15)"
+        }
+    }],
+    "passes": []
+}

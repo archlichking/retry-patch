@@ -1,0 +1,31 @@
+{
+    "name": "retry-patch",
+    "version": "0.0.1",
+    "description": "mocha retry patch",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:archlichking/retry-patch.git"
+    },
+    "keywords": [
+        "mocha",
+        "retry",
+        "patch"
+    ],
+    "author": "archlichking",
+    "license": "mit",
+    "bugs": {
+        "url": "https://github.com/archlichking/retry-patch/issues"
+    },
+    "homepage": "https://github.com/archlichking/retry-patch",
+    "dependencies": {
+        "mocha": "~1.21.3",
+        "chai": "~1.9.1"
+    }
+}

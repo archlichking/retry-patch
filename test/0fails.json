@@ -1,0 +1,36 @@
+{
+    "stats": {
+        "suites": 1,
+        "tests": 2,
+        "passes": 2,
+        "pending": 0,
+        "failures": 0,
+        "start": "2014-10-22T20:38:14.542Z",
+        "end": "2014-10-22T20:38:14.546Z",
+        "duration": 4
+    },
+    "tests": [{
+        "title": "no failed case",
+        "fullTitle": "retry patch no failed case",
+        "duration": 1,
+        "err": {}
+    }, {
+        "title": "xxxx [CS1412444]",
+        "fullTitle": "retry patch xxxx [CS1412444]",
+        "duration": 0,
+        "err": {}
+    }],
+    "pending": [],
+    "failures": [],
+    "passes": [{
+        "title": "xxxx [CS1412444]",
+        "fullTitle": "retry patch xxxx [CS1412444]",
+        "duration": 0,
+        "err": {}
+    }, {
+        "title": "no failed case",
+        "fullTitle": "retry patch no failed case",
+        "duration": 1,
+        "err": {}
+    }]
+}
