@@ -1,6 +1,6 @@
 {
     "name": "retry-patch",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "mocha retry patch",
     "main": "index.js",
     "directories": {
@@ -27,5 +27,8 @@
     "dependencies": {
         "mocha": "~1.21.3",
         "chai": "~1.9.1"
+    },
+    "bin": {
+        "mocha-retry": "./bin/mocha-retry"
     }
 }
