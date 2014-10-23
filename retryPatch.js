@@ -4,8 +4,8 @@ var path = require('path');
 
 var internals = {};
 
-internals.RetryPatch = function(report, file) {
-    this.testFile = file;
+internals.RetryPatch = function(report, files) {
+    this.testFiles = files;
     // string -> array
     this.reportFile = report;
 
@@ -17,25 +17,31 @@ internals.RetryPatch = function(report, file) {
     }
 
     this.mocha = new Mocha({
-        // grep: failures.join('|'),
-        grep: new RegExp(failures.join('|')),
+        // grep: new RegExp(failures.join('|')),
         reporter: 'json',
         timeout: 500000
     });
 
+    var pathSet = {};
+    files.forEach(function(fileName) {
+        var dir = path.dirname(fileName);
+        pathSet[dir] = dir;
+    })
 
-    var dir = path.dirname(file);
     var self = this;
-    fs.readdirSync(dir).filter(function(file) {
-        // Only keep the .js files
-        return file.substr(-3) === '.js';
+    for (var dir in pathSet) {
+        fs.readdirSync(dir).filter(function(file) {
+            // Only keep the .js files
+            return file.substr(-3) === '.js';
 
-    }).forEach(function(file) {
-        // Use the method "addFile" to add the file to mocha
-        self.mocha.addFile(
-            path.join(dir, file)
-        );
-    });
+        }).forEach(function(file) {
+            // Use the method "addFile" to add the file to mocha
+            self.mocha.addFile(
+                path.join(dir, file)
+            );
+        });
+    }
+
 
 };
 
@@ -51,11 +57,9 @@ internals.RetryPatch.prototype.run = function(callback) {
 
     var self = this;
     var runner = this.mocha.run(function(failures) {
-        if(!runner){
+        if (!runner) {
             return callback(self.tests);
         }
-        console.log(failures);
-        console.log(runner);
         var stats = runner.stats;
         var retry = {
             status: 1,
