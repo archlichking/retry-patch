@@ -17,7 +17,7 @@ internals.RetryPatch = function(report, files) {
     }
 
     this.mocha = new Mocha({
-        // grep: new RegExp(failures.join('|')),
+        grep: new RegExp(failures.join('|')),
         reporter: 'json',
         timeout: 500000
     });
@@ -41,8 +41,6 @@ internals.RetryPatch = function(report, files) {
             );
         });
     }
-
-
 };
 
 internals.RetryPatch.prototype._escapeRegexp = function(str) {
@@ -54,7 +52,6 @@ internals.RetryPatch.prototype.run = function(callback) {
     if (this.tests.failures.length == 0) {
         return callback(this.tests);
     }
-
     var self = this;
     var runner = this.mocha.run(function(failures) {
         if (!runner) {
